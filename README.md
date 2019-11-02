@@ -30,10 +30,12 @@ There are many steps
  
   @Mock
   private taskDoa mockDao;
-  4.Inject the mocks into the class under test using @InjectMocks annotation
+  
+ 4.Inject the mocks into the class under test using @InjectMocks annotation
      @InjectMocks 
      private TaskServiceImp taskService;
-  5. @Captor annottation can be used to capture the arguments
+     
+ 5. @Captor annottation can be used to capture the arguments
   
   @Captor
    private ArgumentCaptor<String> argementCaapture;
@@ -47,6 +49,7 @@ There are many steps
 	when(mockDao.getAllTask()).thenReturn(taskList);
   
    argunment matchers lie anyString or anyInt or anyClass(class<?>) can used to mock the method arguments
+   
    
 8.Perform the test on the class  and match the expexted and actual result with assert statement.
   We could also verify the method calla using the verify method and capture the arguments using argumentcaptor and 
